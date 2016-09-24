@@ -27,14 +27,14 @@ public class doublelnklist<T> {
         }
     }
     public void insertLast(T data){
-        nodedl node = new nodedl(data); // se crea el nodo
-        if(isEmpty()){ //Si la lista está vacía
+        nodedl node = new nodedl(data); 
+        if(isEmpty()){ 
             this.first = node;
             this.last = node;
-        } else { //Si la lista tiene elementos
-            node.prev = last; //El apuntador "SIGUIENTE" del nuevo nodo, apunta al primer nodo de la lista.
-            last.next = node; //El apuntador "ANTERIOR" del primer nodo de la lista, apunta al nuevo nodo.
-            last = node; //El apuntador first (que es atributo de la lista) apunta al nuevo nodo.
+        } else { 
+            node.prev = last; 
+            last.next = node; 
+            last = node; 
         }
     }
     
@@ -58,7 +58,7 @@ public class doublelnklist<T> {
      public boolean enode(T data){
         nodedl aux = searchNode(data);
         if (aux==null){
-            System.out.println("No se encontró el nodo");
+            System.out.println("o se encontró el nodo");
             return false;
         }else{
             if (aux == first){
@@ -95,7 +95,7 @@ public class doublelnklist<T> {
             }
             System.out.println("☠");
         } else {
-            System.out.println("La lista está vacía");
+            System.out.println("la lista está vacia");
         }
     }
     
@@ -110,7 +110,7 @@ public class doublelnklist<T> {
             }
             System.out.println("☠");
         } else {
-            System.out.println("La lista está vacía");
+            System.out.println("la lista está vacia");
         }
     }
     private boolean isEmpty(){//Método para ver si la lista esta vacia
